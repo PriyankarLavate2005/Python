@@ -1,0 +1,11 @@
+List:
+
+Mutable (you can change their content after creation)
+Defined using square brackets: my_list = [1, 2, 3]
+Can hold a mix of data types, e.g., my_list = [1, 'two', 3.0]
+
+Tuples:
+
+Immutable (once created, their content can't be changed)
+Defined using parentheses: my_tuple = (1, 2, 3)
+Can also hold a mix of data types, e.g., my_tuple = (1, 'two', 3.0)
