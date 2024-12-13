@@ -66,10 +66,18 @@ class DoublyLL():
                 if n.nref is not None:
                     n.nref.pref = new_node
                 n.nref = new_node
+    def delete_begin(self):
+        if self.head is None:
+            print("Linked List is empty")
+        if self.head.nref is None:
+            self.head=None
+        else:
+            self.head=self.head.nref
+            self.head.pref=None
 
 
 db=DoublyLL()
 db.add_begin(67)
-db.add_end(78)
-db.add_after(78,67)
+db.add_begin(89)
+db.delete_begin()
 db.Print_LL()
