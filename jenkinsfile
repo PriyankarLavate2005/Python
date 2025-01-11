@@ -2,6 +2,15 @@ pipeline {
     agent any
 
     stages {
+        stage('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM',
+                    branches: [[name: '*/main']],  // Replace 'main' with your target branch name if different
+                    userRemoteConfigs: [[url: 'https://github.com/PriyankarLavate2005/Python']]
+                ])
+            }
+        }
+
         stage('Test Stage') {
             steps {
                 script {
