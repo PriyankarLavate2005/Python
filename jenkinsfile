@@ -1,22 +1,12 @@
-pipeline {
+pipeline{
     agent any
-
-    stages {
-        stage('Checkout') {
-            steps {
-                checkout([$class: 'GitSCM',
-                    branches: [[name: '*/main']],  // Replace 'main' with your actual branch name
-                    userRemoteConfigs: [[url: 'https://github.com/PriyankarLavate2005/Python.git']]
-                ])
-            }
-        }
-
-        stage('Test Stage') {
-            steps {
-                script {
-                    bat 'echo Hello, World!'
+    stages{
+        stage[
+            steps('Test'){
+                script{
+                    bat "hello world"
                 }
             }
-        }
+        ]
     }
 }
