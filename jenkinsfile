@@ -1,9 +1,17 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('helloe'){
-            steps{
-                echo "hello world"
+
+    environment {
+        GITHUB_TOKEN = credentials('TokenPython') // Referencing the stored credential
+    }
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                script {
+                    git url: 'https://github.com/PriyankarLavate2005/Python.git', credentialsId: 'TokenPython' // Using the credential ID
+                }
+                echo 'Git cloned successfully'
             }
         }
     }
