@@ -1,12 +1,10 @@
 pipeline{
     agent any
     stages{
-        stage[
-            steps('Test'){
-                script{
-                    bat "hello world"
-                }
+        stage('helloe'){
+            steps{
+                echo "hello world"
             }
-        ]
+        }
     }
 }
