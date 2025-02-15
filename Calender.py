@@ -1,6 +1,4 @@
 import calendar
-print(calendar.calendar(2024))
-
-print(calendar.weekday(2017, 4, 6))
-print(calendar.isleap(7800))
-help(calendar)
+print(calendar.calendar(3000))
+print(calendar.isleap(3000))
+print(calendar.weekdays(2025,6,7))
