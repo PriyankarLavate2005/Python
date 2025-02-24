@@ -1,0 +1,8 @@
+num=int(input("enter the number:"))
+for row in range(0,num):
+    for col in range(0,num):
+        if row==col or  row==0 or col==num-1:
+            print("*",end="")
+        else:
+            print(end=" ")
+    print()
